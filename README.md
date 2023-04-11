@@ -22,7 +22,7 @@ pnpm bulid
 
 - 4-11 
 1. 主页搭建
-
+2. 按需导入ele-plus
 
 
 
