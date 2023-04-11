@@ -1,4 +1,5 @@
-# 作者新增内容
+# Author:June
+# 一名从事PC端的00后开发者
 - 下载
 ```bash
 pnpm install
