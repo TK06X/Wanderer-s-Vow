@@ -1,84 +1,67 @@
 <template>
-  <div> </div>
+  <div class="carousel">
+    <img
+      v-for="(image, index) in images"
+      :key="index"
+      :src="image"
+      :class="{ active: index === current }"
+    />
+  </div>
 </template>
 
-<script lang="ts">
-  import { defineComponent } from 'vue';
-  import axios from 'axios';
+<script lang="ts" setup name="home">
+  // import { defineComponent, ref, onMounted } from 'vue';
+  import image1 from '@/assets/week-picture/1.jpg';
+  import image2 from '@/assets/week-picture/2.jpg';
+  import image3 from '@/assets/week-picture/3.jpg';
+  import image4 from '@/assets/week-picture/4.jpg';
+  import image5 from '@/assets/week-picture/5.jpg';
+  import image6 from '@/assets/week-picture/7.jpg';
 
-  export default defineComponent({
-    name: 'HomePage',
-    data() {
-      return {
-        items: [] as any,
-      };
-    },
-    async mounted() {
-      try {
-        const response = await axios.get('https://some-api.com/items');
-        this.items = response.data;
-      } catch (error) {
-        console.error(error);
-      }
-    },
+  const images = [image1, image2, image3, image4, image5, image6];
+  const current = ref(0);
+  const router = useRoute();
+
+  // 自动切换图片
+  const autoSwitch = () => {
+    setInterval(() => {
+      current.value = (current.value + 1) % images.length;
+    }, 1000);
+  };
+
+  onMounted(() => {
+    autoSwitch();
   });
+
+  // return {
+  //   images,
+  //   current,
+  // };
+  // },
 </script>
 
-<style>
-  nav {
+<style scoped>
+  .carousel {
+    width: 400px;
+    height: 400px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #eee;
+    justify-content: center;
   }
 
-  nav ul {
-    display: flex;
-    list-style: none;
+  .active {
+    opacity: 1;
   }
 
-  nav li {
-    margin-right: 20px;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-  }
-
-  .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-  }
-
-  .card:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  }
-
-  .card img {
+  img {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
     width: 100%;
-    height: 200px;
+    height: auto;
+    max-height: 400px;
     object-fit: cover;
-    border-radius: 5px;
   }
 
-  .card h2 {
-    margin-top: 10px;
-    font-size: 1.5rem;
-  }
-
-  .card p {
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #666;
+  .active {
+    opacity: 1;
   }
 </style>

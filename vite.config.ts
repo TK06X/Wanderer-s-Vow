@@ -1,23 +1,23 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+
 import AutoImprot from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
-import { ref } from 'vue'
-// import path from 'path'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'  //按需引入组件
+import path from 'path'
 
 export default defineConfig({
   plugins: [
     vue(),
     AutoImprot({
-      imports: ['vue', 'vue-router'],
       resolvers: [ElementPlusResolver()],
+      imports: ['vue', 'vue-router', 'pinia'],
     }),
     Components({
-      // resolvers: [ElementPlusResolver({ importStyle: true })],
       resolvers: [ElementPlusResolver()],
     }),
+
 
   ],
   server: {
@@ -26,11 +26,11 @@ export default defineConfig({
   },
   resolve: {
     alias: {
+      '@': path.resolve('./', 'src')
       // "@": fileURLToPath(new URL("./src", import.meta.url))
       // "@": path.resolve(__dirname, "src"),
       // "comps": path.resolve(__dirname, "src/components"),
     }
   },
 })
-
 
