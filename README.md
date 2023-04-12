@@ -7,7 +7,7 @@ pnpm install
 
 - 运行
 ```bash
-pnpm run dev
+pnpm serve
 ```
 
 - 打包
@@ -16,15 +16,20 @@ pnpm bulid
 ```
 
 - 2023年
+- 3/25 -- 4/7
+1. 学vue3
+
 - 4-7
-1. 新增 LICENSE MIT 协议
+1. 新增LICENSE `MIT` 协议
 2. 新增prettier.config.js 
 3. vite.config.ts 服务器地址
 
 - 4-11 
 1. 主页搭建
-2. 按需导入ele-plus
+2. 按需导入`ele-plus`
+3. 学git管理并记录使用
 
+- 4-12
 
 
 
