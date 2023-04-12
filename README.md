@@ -1,13 +1,19 @@
-<div align="center"><h1>Vue 3 + TypeScript + Vite</h1>
+<div align="center">
+<h1>
+   Check
+</h1>
+
+Vue 3 + TypeScript + Vite
 
 [![github](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/TK06X/website)
 [![license](https://img.shields.io/github/license/anncwb/vue-vben-admin.svg)](LICENSE)
 ![version](https://img.shields.io/badge/version-v1.03-blueviolet)
 
 ![pnpm](https://img.shields.io/badge/pnpm-8.1.0-orange)
+
+ [![Face with Monocle](https://em-content.zobj.net/source/microsoft-teams/337/face-with-monocle_1f9d0.png)](https://emojipedia.org/face-with-monocle/)
+
 </div>
-
-
 
 
 # Author : June
