@@ -1,20 +1,19 @@
 <div align="center"><h1>Vue 3 + TypeScript + Vite</h1>
 
 [![github](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/TK06X/website)
-
 [![license](https://img.shields.io/github/license/anncwb/vue-vben-admin.svg)](LICENSE)
 ![version](https://img.shields.io/badge/version-v1.03-blueviolet)
-![pnpm](https://img.shields.io/badge/pnpm-8.1.0-orange)
 
+![pnpm](https://img.shields.io/badge/pnpm-8.1.0-orange)
 </div>
 
-https://github.com/TK06X/website
 
 
 
-## Author:June
+# Author : June
 ## 一名从事PC端的00后开发者
 
+# 🚀环境配置
 - 下载
 ```bash
 pnpm install
@@ -30,7 +29,7 @@ pnpm serve
 pnpm bulid
 ```
 
-- 2023年
+## 😃更新日志 2023年
 - 3/25 -- 4/7
 1. 学vue3
 
