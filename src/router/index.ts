@@ -2,7 +2,6 @@ import { createRouter, createWebHistory, RouteRecordRaw, createWebHashHistory } 
 import Home from "./../views/home.vue";
 import Login from "./../views/login/login.vue"
 
-
 //注册路由
 const routes: Array<RouteRecordRaw> = [
     {
