@@ -1,9 +1,9 @@
 <div align="center">
 <h1>
-   Week
+  Week
 </h1>
 
-## Vue 3 + TypeScript + Vite
+## 技术栈：Vue 3 + TypeScript + Vite
 <br>
 <!-- ![vue](https://img.shields.io/badge/vue-%5E3.2.47-blue) -->
 <!-- ![typescript](https://badgen.net/badge/icon/typescript?icon=typescript&label) -->
@@ -54,7 +54,7 @@ pnpm bulid
 2. 按需导入`ele-plus`
 3. 学git管理并记录使用
 
-- 4-12
+### 4-12
 
 
 
