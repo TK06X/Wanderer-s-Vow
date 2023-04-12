@@ -18,29 +18,28 @@
 
 </div>
 
-## ✍️关于作者
+## ✍️关于
    1. 一名00后开发者
+   2. 寻找志同道合的小伙伴
+   3. 项目属于个人网站类型
 
 ## 😃更新日志 2023
 - 4/7之前
-1. 学vue3
+  1. 学vue3
 
 - 4-7
-1. 新增LICENSE `MIT` 协议
-2. 新增prettier.config.js 
-3. vite.config.ts 服务器地址
+  1. 新增LICENSE `MIT` 协议
+  2. 新增prettier.config.js 
+  3. vite.config.ts 服务器地址
 
 - 4-11 
-1. 主页搭建
-2. 按需导入`ele-plus`
-3. 学git管理并记录使用
+  1. 主页搭建
+  2. 按需导入`ele-plus`
+  3. 学git管理并记录使用
 
 - 4-12
 
-
 Copyright (c) 2016-present, ViewDesign
-
-
 
 ## 🚀环境配置
 - 下载
@@ -57,7 +56,6 @@ pnpm serve
 ```bash
 pnpm bulid
 ```
-
 
 # Vue 3 + TypeScript + Vite
 
