@@ -1,25 +1,24 @@
 <div align="center">
 <h1>
-   Check
+   Week
 </h1>
 
-Vue 3 + TypeScript + Vite
+## Vue 3 + TypeScript + Vite
+<br>
+<!-- ![vue](https://img.shields.io/badge/vue-%5E3.2.47-blue) -->
+<!-- ![typescript](https://badgen.net/badge/icon/typescript?icon=typescript&label) -->
+
+![version](https://img.shields.io/badge/version-v1.03-blueviolet)
 
 [![github](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/TK06X/website)
 [![license](https://img.shields.io/github/license/anncwb/vue-vben-admin.svg)](LICENSE)
-![version](https://img.shields.io/badge/version-v1.03-blueviolet)
+![pnpm](https://img.shields.io/badge/pnpm-8.1.0-orange)  
 
-![pnpm](https://img.shields.io/badge/pnpm-8.1.0-orange)
-
- [Face with Monocle](https://em-content.zobj.net/source/microsoft-teams/337/face-with-monocle_1f9d0.png)
+![Face with Monocle](https://em-content.zobj.net/source/microsoft-teams/337/face-with-monocle_1f9d0.png)
 
 </div>
 
-
-## Author : June
-## 
-
-# 🚀环境配置
+## 🚀环境配置
 - 下载
 ```bash
 pnpm install
@@ -35,7 +34,7 @@ pnpm serve
 pnpm bulid
 ```
 
-## 😃更新日志 2023年
+## 😃更新日志 2023
 - 3/25 -- 4/7
 1. 学vue3
 
