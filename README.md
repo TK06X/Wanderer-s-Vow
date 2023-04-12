@@ -18,24 +18,11 @@
 
 </div>
 
-## 🚀环境配置
-- 下载
-```bash
-pnpm install
-```
-
-- 运行
-```bash
-pnpm serve
-```
-
-- 打包
-```bash
-pnpm bulid
-```
+## ✍️关于作者
+   1. 一名00后开发者
 
 ## 😃更新日志 2023
-- 3/25 -- 4/7
+- 4/7之前
 1. 学vue3
 
 - 4-7
@@ -53,7 +40,24 @@ pnpm bulid
 
 Copyright (c) 2016-present, ViewDesign
 
-一名从事PC端的00后开发者
+
+
+## 🚀环境配置
+- 下载
+```bash
+pnpm install
+```
+
+- 运行
+```bash
+pnpm serve
+```
+
+- 打包
+```bash
+pnpm bulid
+```
+
 
 # Vue 3 + TypeScript + Vite
 
