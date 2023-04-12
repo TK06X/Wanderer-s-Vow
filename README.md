@@ -1,7 +1,5 @@
 <div align="center"><h1>Vue 3 + TypeScript + Vite</h1>
 
-
-
 [![license](https://img.shields.io/github/license/anncwb/vue-vben-admin.svg)](LICENSE)
 [![github](https://badgen.net/badge/icon/github?icon=github&label)]((https://github.com/TK06X/website))
 ![version](https://img.shields.io/badge/version-v1.03-blueviolet)
