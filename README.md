@@ -11,13 +11,13 @@ Vue 3 + TypeScript + Vite
 
 ![pnpm](https://img.shields.io/badge/pnpm-8.1.0-orange)
 
- [![Face with Monocle](https://em-content.zobj.net/source/microsoft-teams/337/face-with-monocle_1f9d0.png)](https://emojipedia.org/face-with-monocle/)
+ [Face with Monocle](https://em-content.zobj.net/source/microsoft-teams/337/face-with-monocle_1f9d0.png)
 
 </div>
 
 
-# Author : June
-## 一名从事PC端的00后开发者
+## Author : June
+## 
 
 # 🚀环境配置
 - 下载
@@ -52,6 +52,9 @@ pnpm bulid
 - 4-12
 
 
+Copyright (c) 2016-present, ViewDesign
+
+一名从事PC端的00后开发者
 
 # Vue 3 + TypeScript + Vite
 
