@@ -9,8 +9,8 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    BackGround: typeof import('./src/components/BackGround.vue')['default']
     Carousel: typeof import('./src/components/Carousel.vue')['default']
-    ElButton: typeof import('element-plus/es')['ElButton']
     Footer: typeof import('./src/components/Footer.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     Navbar: typeof import('./src/components/Navbar.vue')['default']

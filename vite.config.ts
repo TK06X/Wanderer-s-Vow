@@ -17,13 +17,12 @@ export default defineConfig({
     Components({
       resolvers: [ElementPlusResolver()],
     }),
-
-
   ],
   server: {
     host: "127.0.0.1", // 这里也可以写成域名，在工作开发中可以配置环境变量一起使用
     port: 5560
   },
+
   resolve: {
     alias: {
       '@': path.resolve('./', 'src')
