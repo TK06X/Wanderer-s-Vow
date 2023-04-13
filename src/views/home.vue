@@ -30,7 +30,7 @@
       <a href="#" class="btn">Download CV</a>
     </div>
     <div class="home-img">
-      <img src="../assets/week-picture/4.jpg" alt="" />
+      <!-- <img :src="@/../public/week-picture/``.jpg" alt="" /> -->
     </div>
   </section>
 </template>
