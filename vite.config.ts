@@ -6,6 +6,8 @@ import Components from 'unplugin-vue-components/vite'
 
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'  //按需引入组件
 import path from 'path'
+// import { resolve } from "path"
+
 
 export default defineConfig({
   plugins: [
@@ -25,7 +27,13 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      '@': path.resolve('./', 'src')
+      // '@': path.resolve('./', 'src')
+
+      '@': path.resolve(__dirname, './src'),
+      '*': path.resolve('')
+
+
+      // "@": resolve(__dirname, "./src")
       // "@": fileURLToPath(new URL("./src", import.meta.url))
       // "@": path.resolve(__dirname, "src"),
       // "comps": path.resolve(__dirname, "src/components"),
