@@ -39,7 +39,7 @@
 </template>
 
 <script setup lang="ts" name="home">
-  import homeData from './home';
+  import homeData from './modules/home';
   import { useRoute, useRouter } from 'vue-router';
   // import { ElButton } from 'element-plus';
 
