@@ -22,6 +22,13 @@ export default defineConfig({
   ],
   server: {
     host: true,
+    proxy: {//反向代理，通过axios调用后端服务，解决跨域问题
+      "/api": {
+        // target: "http://localhost:8081",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ""),
+      },
+    }
   },
   resolve: {
     alias: {

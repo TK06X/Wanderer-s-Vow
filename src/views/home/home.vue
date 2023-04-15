@@ -2,8 +2,7 @@
   <header class="header">
     <a :href="homeData.url" class="logo">{{ homeData.websiteTitle }}</a>
 
-    <el-menu-item index="/test" style="--i: 1">test</el-menu-item>
-    <el-menu-item index="/login" style="--i: 1">login</el-menu-item>
+    <a-menu v-model:selectedKeys="current" mode="horizontal"> </a-menu>
 
     <!-- <nav class="navbar">
       <a href="#" class="active item" style="--i: 1">Home</a>
@@ -69,7 +68,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    background: #2e2e2e;
+    background: #000000;
     color: #ffffff;
   }
 
@@ -309,18 +308,18 @@
   @keyframes floatImage {
     0% {
       transform: translateY(0);
-      opacity: 0;
+      opacity: 0.4;
     }
 
     50% {
       transform: translateY(-48px);
       /* xy轴线横移 */
-      opacity: 0.5;
+      opacity: 0.8;
     }
 
     100% {
       transform: translateY(0);
-      opacity: 1;
+      opacity: 0.4;
     }
   }
 </style>
