@@ -1,8 +1,12 @@
 <template>
+  <div class="home-img">
+    <!-- <img :src="`@/../public/week-picture/${dateStr}.jpg`" alt="" /> -->
+  </div>
+
   <header class="header">
     <a :href="homeData.url" class="logo">{{ homeData.websiteTitle }}</a>
 
-    <a-menu v-model:selectedKeys="current" mode="horizontal"> </a-menu>
+    <!-- <a-menu v-model:selectedKeys="current" mode="horizontal"> </a-menu> -->
 
     <!-- <nav class="navbar">
       <a href="#" class="active item" style="--i: 1">Home</a>
@@ -40,7 +44,8 @@
 
 <script setup lang="ts">
   import homeData from './modules/home';
-  // import Meun from '@'
+  import Meun from '../defalut/meun/meun.vue';
+
   import { useRoute, useRouter } from 'vue-router';
   // import { ElButton } from 'element-plus';
 
@@ -56,7 +61,6 @@
 
     // useRouter().push(index);
   };
-
   let onLoginClick = () => {};
 </script>
 

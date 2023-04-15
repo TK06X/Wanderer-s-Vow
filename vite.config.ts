@@ -1,10 +1,14 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-import AutoImprot from 'unplugin-auto-import/vite'
-import Components from 'unplugin-vue-components/vite'
+import AutoImprot from 'unplugin-auto-import/vite'// 按需自动导入 API        这个插件是为了解决在开发中的导入问题 
+import Components from 'unplugin-vue-components/vite'//按需组件自动导入   
+
+// https://blog.csdn.net/Android062005/article/details/128684495 unplugin-auto-import 和 unplugin-vue-components
 
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'  //按需引入组件
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'  //按需引入组件
+
 import path from 'path'
 // import { resolve } from "path"
 
@@ -13,11 +17,11 @@ export default defineConfig({
   plugins: [
     vue(),
     AutoImprot({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [, AntDesignVueResolver()],
       imports: ['vue', 'vue-router', 'pinia'],
     }),
     Components({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [AntDesignVueResolver()],
     }),
   ],
   server: {

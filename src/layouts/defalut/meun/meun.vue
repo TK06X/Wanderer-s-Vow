@@ -36,18 +36,12 @@
 
 <script lang="ts">
   import { defineComponent, ref } from 'vue';
-  import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons-vue';
   export default defineComponent({
     setup() {
       const current = ref<string[]>(['mail']);
       return {
         current,
       };
-    },
-    components: {
-      MailOutlined,
-      AppstoreOutlined,
-      SettingOutlined,
     },
   });
 </script>
