@@ -2,15 +2,8 @@
   <header class="header">
     <a :href="homeData.url" class="logo">{{ homeData.websiteTitle }}</a>
 
-    <el-menu
-      mode="horizontal"
-      :default-active="useRoute().path"
-      @select="handleSelect"
-      class="navbar"
-    >
-      <el-menu-item index="/test" style="--i: 1">test</el-menu-item>
-      <el-menu-item index="/login" style="--i: 1">login</el-menu-item>
-    </el-menu>
+    <el-menu-item index="/test" style="--i: 1">test</el-menu-item>
+    <el-menu-item index="/login" style="--i: 1">login</el-menu-item>
 
     <!-- <nav class="navbar">
       <a href="#" class="active item" style="--i: 1">Home</a>
@@ -27,9 +20,11 @@
       <h3>{{ homeData.data.title }}</h3>
       <h1>Call Me Phoenix</h1>
       <h3>And I'm a <span class="multiple-text"></span></h3>
-      <p style="line-height: 1.8">
-        {{ homeData.data.text }}
-      </p>
+      <p style="line-height: 1.8">我真的做对了吗？我现在的生活好像没有什么意义。 </p>
+      <p style="line-height: 1.8">你已经很努力了，不要太苛求自己。 </p>
+      <p style="line-height: 1.8">可是我感觉自己好像一事无成，一直在原地踏步。 </p>
+      <p style="line-height: 1.8">别忘了你曾经的梦想和目标，你一定能找到属于自己的方向。 </p>
+      <p style="line-height: 1.8">我会继续努力的，希望有一天能找到自己真正的归宿。 </p>
       <div class="social-media">
         <a href="#" style="--i: 7"><i class="bx bxl-tiktok"></i></a>
         <a href="#" style="--i: 8"><i class="bx bxl-facebook-circle"></i></a>
