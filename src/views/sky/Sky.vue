@@ -1,3 +1,7 @@
+<!-- <script setup name="sky" lang="ts"></script>
+
+<template> </template> -->
+
 <script type="module">
   // 导入三维模型库
   import * as THREE from 'https://cdn.skypack.dev/three@0.136.0';

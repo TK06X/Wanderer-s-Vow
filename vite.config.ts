@@ -21,22 +21,15 @@ export default defineConfig({
     }),
   ],
   server: {
-    host: "127.0.0.1", // 这里也可以写成域名，在工作开发中可以配置环境变量一起使用
-    port: 5560
+    host: true,
+    // host: "127.0.0.1", // 这里也可以写成域名，在工作开发中可以配置环境变量一起使用
+    // port: 5560
   },
 
   resolve: {
     alias: {
-      // '@': path.resolve('./', 'src')
-
       '@': path.resolve(__dirname, './src'),
       '*': path.resolve('')
-
-
-      // "@": resolve(__dirname, "./src")
-      // "@": fileURLToPath(new URL("./src", import.meta.url))
-      // "@": path.resolve(__dirname, "src"),
-      // "comps": path.resolve(__dirname, "src/components"),
     }
   },
 })

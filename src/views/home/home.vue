@@ -2,14 +2,24 @@
   <header class="header">
     <a :href="homeData.url" class="logo">{{ homeData.websiteTitle }}</a>
 
-    <nav class="navbar">
+    <el-menu
+      mode="horizontal"
+      :default-active="useRoute().path"
+      @select="handleSelect"
+      class="navbar"
+    >
+      <el-menu-item index="/test" style="--i: 1">test</el-menu-item>
+      <el-menu-item index="/login" style="--i: 1">login</el-menu-item>
+    </el-menu>
+
+    <!-- <nav class="navbar">
       <a href="#" class="active item" style="--i: 1">Home</a>
       <a href="#" class="item" style="--i: 2">About</a>
       <a href="#" class="item" style="--i: 3">Skills</a>
       <a href="#" class="item" style="--i: 4">Portfolio</a>
-      <a href="#" class="item" style="--i: 5">Contact</a>
-      <div href="#" class="item" style="--i: 6">登录/注册</div>
-    </nav>
+      <a href="#" class="item" style="--i: 5">sky</a>
+      <span class="item" style="--i: 6" @click="onLoginClick">登录/注册</span>
+    </nav> -->
   </header>
 
   <section class="home">
@@ -17,9 +27,8 @@
       <h3>{{ homeData.data.title }}</h3>
       <h1>Call Me Phoenix</h1>
       <h3>And I'm a <span class="multiple-text"></span></h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing dlit . Accusantium,ab autem repellat
-        reiciendis ipsam perspicictis.
+      <p style="line-height: 1.8">
+        {{ homeData.data.text }}
       </p>
       <div class="social-media">
         <a href="#" style="--i: 7"><i class="bx bxl-tiktok"></i></a>
@@ -30,32 +39,43 @@
       <a href="#" class="btn">Download CV</a>
     </div>
     <div class="home-img">
-      <!-- <img :src="@/../public/week-picture/``.jpg" alt="" /> -->
+      <img :src="`@/../public/week-picture/${dateStr}.jpg`" alt="" />
     </div>
   </section>
 </template>
 
 <script setup lang="ts" name="home">
   import homeData from './home';
-  // import  url('https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js')
+  import { useRoute, useRouter } from 'vue-router';
+  // import { ElButton } from 'element-plus';
+
   let dateStr = ref();
+  let router = useRouter();
 
   onMounted(() => {
     dateStr.value = new Date().getDay();
   });
+
+  const handleSelect = (index?: any, indexPath?: string) => {
+    router.push(index);
+
+    // useRouter().push(index);
+  };
+
+  let onLoginClick = () => {};
 </script>
 
 <style scoped>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-  @import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+  /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;4 00;500;600;700&display=swap'); */
+  /* @import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'); */
 
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    background: #1f242d;
-    color: #fff;
+    background: #2e2e2e;
+    color: #ffffff;
   }
 
   .header {
@@ -80,11 +100,17 @@
     opacity: 0;
     animation: slideRight 1s ease forwards;
   }
+  .el-menu--horizontal {
+    border-bottom: none;
+  }
+  .el-menu-item {
+    background-color: transparent !important;
+  }
 
-  .navbar a {
+  .navbar .el-menu-item {
     display: inline-block;
     font-size: 18px;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
@@ -94,11 +120,12 @@
     animation-delay: calc(0.2s * var(--i));
   }
 
-  .navbar a:hover,
-  .navbar a.active {
-    color: #b7b2a9;
+  .navbar .el-menu-item:hover,
+  .navbar .el-menu-item.active {
+    color: inherit !important;
+    border-bottom: solid 1px var(--el-menu-border-color);
   }
-  /*  */
+
   .navbar div {
     display: inline-block;
     font-size: 18px;
@@ -171,9 +198,9 @@
     border-radius: 50%;
     margin-right: -20px;
     box-shadow: 0 0 20px #b7b2a9;
-    opacity: 0;
+    /* opacity: 0.1; */
     animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
-    animation-delay: 2s, 3s;
+    /* animation-delay: 2s, 3s; */
   }
 
   .social-media a {
@@ -280,22 +307,25 @@
     }
 
     100% {
-      transform: scale(1);
-      opacity: 1;
+      transform: scale(1); /* 元素放大缩小  2 是两倍 */
     }
   }
 
   @keyframes floatImage {
     0% {
       transform: translateY(0);
+      opacity: 0;
     }
 
     50% {
-      transform: translateY(-24px);
+      transform: translateY(-48px);
+      /* xy轴线横移 */
+      opacity: 0.5;
     }
 
     100% {
       transform: translateY(0);
+      opacity: 1;
     }
   }
 </style>

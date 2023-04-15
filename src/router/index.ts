@@ -1,24 +1,25 @@
 import { createRouter, createWebHistory, RouteRecordRaw, createWebHashHistory } from 'vue-router'
-import Home from "./../views/home.vue";
-import Login from "./../views/login/login.vue"
 
 //注册路由
 const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
-        name: 'Home',
-        component: Home
+        name: 'home',
+        component: () => import('@/views/home/home.vue')
     },
     {
-        path: '/Login',
-        name: 'Login',
-        component: Login
+        path: '/login',
+        name: 'login',
+        component: () => import('./../views/login/login.vue')
+
     },
-    // {
-    //     path: '/HelloWorld',
-    //     name: 'Home',
-    //     component: Home
-    // }
+    {
+        path: '/test',
+        name: 'test',
+        component: () => import('@/views/practice/test.vue')
+    },
+
+
 ];
 const router = createRouter({
     // createWebHashHistory()是使用hash模式路由
