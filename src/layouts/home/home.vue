@@ -38,8 +38,9 @@
   </section>
 </template>
 
-<script setup lang="ts" name="home">
+<script setup lang="ts">
   import homeData from './modules/home';
+  // import Meun from '@'
   import { useRoute, useRouter } from 'vue-router';
   // import { ElButton } from 'element-plus';
 
