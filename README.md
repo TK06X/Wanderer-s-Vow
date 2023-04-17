@@ -1,6 +1,6 @@
 <div align="center">
 <h1>
-  Week
+  Wanderer's Vow
 </h1>
 
 ## 技术栈：Vue 3 + TypeScript + Vite
