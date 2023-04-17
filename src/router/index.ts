@@ -4,13 +4,19 @@ import { createRouter, createWebHistory, RouteRecordRaw, createWebHashHistory } 
 const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
-        redirect: '/home'
+        redirect: '/page'
     },
     {
         path: '/home',
         name: 'home',
         component: () => import('@/layouts/home/home.vue')
     },
+    {
+        path: '/page',
+        name: 'page',
+        component: () => import('@/layouts/home/page.vue')
+    },
+
 ];
 const router = createRouter({
     history: createWebHashHistory(''),

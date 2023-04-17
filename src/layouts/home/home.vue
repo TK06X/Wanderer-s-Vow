@@ -1,10 +1,23 @@
 <template>
-  <div class="home-img">
-    <!-- <img :src="`@/../public/week-picture/${dateStr}.jpg`" alt="" /> -->
-  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <a-layout>
+    <a-layout-header>
+      <!-- <Meun></Meun> -->
+    </a-layout-header>
+    <a-layout-content>Content</a-layout-content>
+    <a-layout-footer>Footer</a-layout-footer>
+  </a-layout>
 
   <header class="header">
-    <a :href="homeData.url" class="logo">{{ homeData.websiteTitle }}</a>
+    <!-- <a :href="homeData.url" class="logo">{{ homeData.websiteTitle }}</a> -->
 
     <!-- <a-menu v-model:selectedKeys="current" mode="horizontal"> </a-menu> -->
 
@@ -65,6 +78,36 @@
 </script>
 
 <style scoped>
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar li {
+    margin: 0 10px;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
   /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;4 00;500;600;700&display=swap'); */
   /* @import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'); */
 

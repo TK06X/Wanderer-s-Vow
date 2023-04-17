@@ -1,47 +1,66 @@
 <template>
-  <a-menu v-model:selectedKeys="current" mode="horizontal">
-    <a-menu-item key="mail">
-      <template #icon>
-        <mail-outlined />
-      </template>
-      Navigation One
-    </a-menu-item>
-    <a-menu-item key="app" disabled>
-      <template #icon>
-        <appstore-outlined />
-      </template>
-      Navigation Two
-    </a-menu-item>
-    <a-sub-menu>
-      <template #icon>
-        <setting-outlined />
-      </template>
-      <template #title>Navigation Three - Submenu</template>
-      <a-menu-item-group title="Item 1">
-        <a-menu-item key="setting:1">Option 1</a-menu-item>
-        <a-menu-item key="setting:2">Option 2</a-menu-item>
-      </a-menu-item-group>
-      <a-menu-item-group title="Item 2">
-        <a-menu-item key="setting:3">Option 3</a-menu-item>
-        <a-menu-item key="setting:4">Option 4</a-menu-item>
-      </a-menu-item-group>
-    </a-sub-menu>
-    <a-menu-item key="alipay">
-      <a href="https://antdv.com" target="_blank" rel="noopener noreferrer">
-        Navigation Four - Link
-      </a>
-    </a-menu-item>
-  </a-menu>
+  <div class="banner">
+    <div class="navbar">
+      <img src="@/../public/logo.png" class="logo" />
+
+      <ul>
+        <li><a>666</a></li>
+        <li><a>666</a></li>
+        <li><a>666</a></li>
+        <li><a>666</a></li>
+      </ul>
+    </div>
+  </div>
 </template>
 
-<script lang="ts">
-  import { defineComponent, ref } from 'vue';
-  export default defineComponent({
-    setup() {
-      const current = ref<string[]>(['mail']);
-      return {
-        current,
-      };
-    },
+<script setup lang="ts">
+  import { useRoute, useRouter } from 'vue-router';
+
+  const current = ref(0);
+
+  onMounted(() => {
+    window.addEventListener('scroll', function () {
+      var header: any;
+      header = document.querySelector('header');
+      header.classList.toggle('small', window.scrollY > 0);
+    });
   });
 </script>
+
+<style scoped>
+  .banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+      url(@/../public/000.jpg);
+
+    background-size: cover;
+    background-position: center;
+  }
+  .logo {
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+  }
+
+  .navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+  }
+  .navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .navbar ul li::after {
+    content: '';
+  }
+</style>
