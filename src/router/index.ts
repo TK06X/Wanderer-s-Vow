@@ -2,28 +2,28 @@ import { createRouter, createWebHistory, RouteRecordRaw, createWebHashHistory } 
 
 //注册路由
 const routes: Array<RouteRecordRaw> = [
-    {
-        path: '/',
-        redirect: '/page'
-    },
-    {
-        path: '/home',
-        name: 'home',
-        component: () => import('@/layouts/home/home.vue')
-    },
-    {
-        path: '/page',
-        name: 'page',
-        component: () => import('@/layouts/home/page.vue')
-    },
+  {
+    path: '/',
+    redirect: '/page'
+  },
+  {
+    path: '/home',
+    name: 'home',
+    component: () => import('@/layouts/home/home.vue')
+  },
+  {
+    path: '/page',
+    name: 'page',
+    component: () => import('@/layouts/home/page.vue')
+  },
 
 ];
 const router = createRouter({
-    history: createWebHashHistory(''),
-    routes
+  history: createWebHashHistory(''),
+  routes
 });
 
 router.beforeEach((news, old, next) => {
-    next();
+  next();
 })
 export default router;
