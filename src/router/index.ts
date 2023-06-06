@@ -4,7 +4,7 @@ import { createRouter, createWebHistory, RouteRecordRaw, createWebHashHistory } 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/page'
+    redirect: '/login'
   },
   {
     path: '/home',
@@ -12,9 +12,9 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/layouts/home/home.vue')
   },
   {
-    path: '/page',
-    name: 'page',
-    component: () => import('@/layouts/home/page.vue')
+    path: '/login',
+    name: 'login',
+    component: () => import('@/views/login/login.vue')
   },
 
 ];
