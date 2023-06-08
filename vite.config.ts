@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-import AutoImprot from 'unplugin-auto-import/vite'// 按需自动导入 API        这个插件是为了解决在开发中的导入问题 
-import Components from 'unplugin-vue-components/vite'//按需组件自动导入   
+import AutoImprot from 'unplugin-auto-import/vite'// 按需自动导入 API        这个插件是为了解决在开发中的导入问题
+import Components from 'unplugin-vue-components/vite'//按需组件自动导入
 
 // https://blog.csdn.net/Android062005/article/details/128684495 unplugin-auto-import 和 unplugin-vue-components
 

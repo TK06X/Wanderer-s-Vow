@@ -1,6 +1,5 @@
-<script setup lang="ts">
-  //
-</script>
+<script setup lang="ts"></script>
+
 <template>
   <div class="h-screen font-sans bg-cover login">
     <div class="container flex items-center justify-center flex-1 h-full mx-auto">
@@ -15,7 +14,6 @@
 
         <div class="relative w-full px-6 py-4 bg-gray-100 shadow-md rounded-3xl">
           <label for="" class="block mt-3 text-2xl font-semibold text-center text-gray-700">
-            登录
           </label>
           <form class="mt-10">
             <div class="relative">
@@ -39,7 +37,7 @@
                   class="text-indigo-600 border-gray-300 rounded shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                   name="remember"
                 />
-                <span class="ml-2 text-sm text-gray-600"> 忘记密码 </span>
+                <span class="ml-2 text-sm text-gray-600"> </span>
               </label>
 
               <div class="w-full text-right">
@@ -51,28 +49,29 @@
               <button
                 class="w-full py-3 text-white transition duration-500 ease-in-out transform bg-blue-500 shadow-xl rounded-xl hover:shadow-inner focus:outline-none hover:-translate-x hover:scale-105"
               >
+                登录
               </button>
             </div>
 
             <div class="flex items-center text-center mt-7">
               <hr class="w-full border-gray-300 rounded-md border-1" />
-              <label class="block w-full text-sm font-medium text-gray-600"> </label>
+              <label class="block w-full text-sm font-medium text-gray-600">@C </label>
               <hr class="w-full border-gray-300 rounded-md border-1" />
             </div>
 
             <div class="flex justify-center w-full mt-7">
-              <div
+              <!-- <div
                 class="flex items-center justify-center px-4 py-2 mr-5 text-white transition duration-500 ease-in-out transform bg-blue-500 border-none shadow-xl cursor-pointer rounded-xl hover:shadow-inner hover:-translate-x hover:scale-105"
               >
                 <i-mdi-qqchat style="font-size: 1em; color: #fff" />
-                <span class="ml-1"> </span>
+                <span class="ml-1">QQ</span>
               </div>
               <div
                 class="flex items-center justify-center px-4 py-2 text-white transition duration-500 ease-in-out transform bg-green-600 border-none shadow-xl cursor-pointer rounded-xl hover:shadow-inner hover:-translate-x hover:scale-105"
               >
                 <i-mdi-wechat style="font-size: 1.2em; color: #fff" />
-                <span class="ml-1"> </span>
-              </div>
+                <span class="ml-1">微信</span>
+              </div> -->
             </div>
           </form>
         </div>
@@ -80,3 +79,11 @@
     </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+  .login {
+    // background: url('../../assets/img/background.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>

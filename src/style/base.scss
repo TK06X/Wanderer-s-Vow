@@ -1,0 +1,31 @@
+@import 'reset-css/sass/reset';
+@import 'animate.css';
+@import './clock.css';
+
+::-webkit-scrollbar {
+  /*隐藏滚轮*/
+  display: none;
+}
+
+/*修复火狐浏览器的滚轮样式问题*/
+* {
+  scrollbar-width: none;
+}
+
+input {
+  outline:none
+}
+
+button, [type=button], [type=reset], [type=submit] {
+  background-color: var(--el-button-bg-color)
+}
+
+.el-main {
+  padding: 0 !important;
+}
+.message-box-custom-class {
+  min-width: 350px !important;
+}
+.el-popover.el-popper {
+  background: var(--el-bg-color-overlay) !important
+}
