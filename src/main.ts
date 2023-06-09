@@ -13,6 +13,6 @@ async function setupSynchronized() {
 }
 
 setupSynchronized().then(() => {
-  app.use(router);
-  app.mount("#app");
+  app.use(router)
+    .mount("#app");
 });

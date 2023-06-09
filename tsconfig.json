@@ -19,11 +19,8 @@
       "@/*": ["src/*"]
     },
       "allowJs": true,
-  
-
-
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue","src/types/auto-imports.d.ts", "src/views/sky/sky.ts"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/views/sky/sky.ts"],
   "references": [{ "path": "./tsconfig.node.json" }],
-  
+
 }
