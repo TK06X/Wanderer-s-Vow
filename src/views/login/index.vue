@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router';
+import { useRouter } from 'vue-router'
+import { onMounted } from 'vue'
+import Cookies from 'js-cookie'
 
-import Cookies from 'js-cookie';
-
-const router = useRouter();
+const router = useRouter()
 // const userState = userStore();
 // const time = useTimeFix();
 
@@ -17,9 +17,8 @@ const router = useRouter();
 
 // useFields(Object.keys(schema));
 
- onMounted(() => {
-
-  Cookies.set('666', '999', { expires: 7 });
+onMounted(() => {
+  Cookies.set('666', '999', { expires: 7 })
 })
 
 // const onSubmit = handleSubmit(async (values: any) => {
@@ -27,17 +26,17 @@ const router = useRouter();
 // });
 
 const onSubmit = () => {
-  console.log('0');
+  console.log('0')
 
-  router.push('/dashboard');
+  router.push('/dashboard')
 }
-
-
 </script>
 
 <template>
   <div class="h-screen font-sans bg-cover login">
-    <div class="container flex items-center justify-center flex-1 h-full mx-auto">
+    <div
+      class="container flex items-center justify-center flex-1 h-full mx-auto"
+    >
       <div class="relative w-full mx-10 sm:max-w-sm">
         <div
           class="absolute w-full h-full transform bg-blue-400 shadow-lg card rounded-3xl -rotate-6"
@@ -47,8 +46,13 @@ const onSubmit = () => {
           class="absolute w-full h-full transform bg-red-400 shadow-lg card rounded-3xl rotate-6"
         ></div>
 
-        <div class="relative w-full px-6 py-4 bg-gray-100 shadow-md rounded-3xl">
-          <label for="" class="block mt-3 text-2xl font-semibold text-center text-gray-700">
+        <div
+          class="relative w-full px-6 py-4 bg-gray-100 shadow-md rounded-3xl"
+        >
+          <label
+            for=""
+            class="block mt-3 text-2xl font-semibold text-center text-gray-700"
+          >
             登录
           </label>
           <form class="mt-10" @submit.prevent="onSubmit">
@@ -67,7 +71,10 @@ const onSubmit = () => {
             </div>
 
             <div class="flex mt-10">
-              <label for="remember_me" class="inline-flex items-center w-full cursor-pointer">
+              <label
+                for="remember_me"
+                class="inline-flex items-center w-full cursor-pointer"
+              >
                 <input
                   id="remember_me"
                   type="checkbox"
@@ -78,7 +85,10 @@ const onSubmit = () => {
               </label>
 
               <div class="w-full text-right">
-                <a class="text-sm text-gray-600 underline hover:text-gray-900" href="#">
+                <a
+                  class="text-sm text-gray-600 underline hover:text-gray-900"
+                  href="#"
+                >
                   忘记密码
                 </a>
               </div>
@@ -94,7 +104,9 @@ const onSubmit = () => {
 
             <div class="flex items-center text-center mt-7">
               <hr class="w-full border-gray-300 rounded-md border-1" />
-              <label class="block w-full text-sm font-medium text-gray-600"> 第三方登录 </label>
+              <label class="block w-full text-sm font-medium text-gray-600">
+                第三方登录
+              </label>
               <hr class="w-full border-gray-300 rounded-md border-1" />
             </div>
 
